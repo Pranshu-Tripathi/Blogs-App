@@ -22,6 +22,8 @@ services:
     build:
       context: ./moderation
       dockerfile: Dockerfile
+    ports:
+      - "4003:4003"
   
   event-bus:
     build:
