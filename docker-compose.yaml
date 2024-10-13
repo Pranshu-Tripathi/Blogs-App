@@ -8,6 +8,8 @@ services:
     build:
       context: ./comments
       dockerfile: Dockerfile
+    ports:
+      - "4001:4001"
   
   query-service:
     build:
