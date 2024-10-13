@@ -17,6 +17,8 @@ services:
     build:
       context: ./query
       dockerfile: Dockerfile
+    ports:
+      - "4002:4002"
   
   moderation-service:
     build:
