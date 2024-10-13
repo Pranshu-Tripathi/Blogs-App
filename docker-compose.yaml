@@ -14,6 +14,8 @@ services:
       - "4001:4001"
   
   query-service:
+    depends_on:
+      - event-bus
     build:
       context: ./query
       dockerfile: Dockerfile
@@ -21,6 +23,8 @@ services:
       - "4002:4002"
   
   moderation-service:
+    depends_on:
+      - event-bus
     build:
       context: ./moderation
       dockerfile: Dockerfile
