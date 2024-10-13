@@ -1,0 +1,32 @@
+services:
+  posts-service:
+    build: 
+      context: ./posts
+      dockerfile: Dockerfile
+
+  comments-service:
+    build:
+      context: ./comments
+      dockerfile: Dockerfile
+  
+  query-service:
+    build:
+      context: ./query
+      dockerfile: Dockerfile
+  
+  moderation-service:
+    build:
+      context: ./moderation
+      dockerfile: Dockerfile
+  
+  event-bus:
+    build:
+      context: ./event-bus
+      dockerfile: Dockerfile
+  
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
