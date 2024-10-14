@@ -8,7 +8,7 @@ const PostList = () => {
 
     const fetchPosts = async () => {
         try {
-            const res = await axios.get('http://localhost:4002/posts').catch((err) => console.log(err));
+            const res = await axios.get('http://posts.com/posts').catch((err) => console.log(err));
             setPosts(res.data);
         } catch (err) {
             console.error('Error fetching posts from query-service', err);
