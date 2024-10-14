@@ -11,7 +11,7 @@ const CommentCreate = ({postId}) => {
         // await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
         //     content
         // });
-        await axios.post(`http://posts.com/posts/comments/${postId}`, {
+        await axios.post(`http://posts.com/posts/${postId}/comments`, {
             content
         }).catch(err => console.log("COMMENT CREATE CLIENT ERROR: ", err));
         setContent('');
